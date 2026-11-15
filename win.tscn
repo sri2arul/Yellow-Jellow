@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://md805jhd50rk"]
+
+[ext_resource type="Texture2D" uid="uid://cjk26hrb3hs8x" path="res://Untitled design (47).png" id="1_hgi8f"]
+[ext_resource type="Texture2D" uid="uid://cg2bml2kw0r5e" path="res://slime2.png" id="2_tmki8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yblwc"]
+load_path = "res://.godot/imported/catacomb wall.png-28b3a21ee136fa37b572b38d57b67559.ctex"
+
+[node name="Win" type="Label" unique_id=88841341]
+offset_left = 109.0
+offset_top = 65.0
+offset_right = 235.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 30
+text = "YOU ESCAPED THE FRIDGE'S CATACOMBS!"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=119918228]
+layout_mode = 0
+offset_left = -836.0
+offset_top = -436.0
+offset_right = 1964.0
+offset_bottom = 1164.0
+texture = SubResource("CompressedTexture2D_yblwc")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=202205290]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -14.0
+offset_right = 962.0
+offset_bottom = 536.0
+color = Color(1, 1, 1, 0.3372549)
+
+[node name="Label" type="Label" parent="." unique_id=320776691]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="UntitledDesign(47)" type="Sprite2D" parent="." unique_id=373787233]
+position = Vector2(254.99998, 268)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_hgi8f")
+
+[node name="Slime2" type="Sprite2D" parent="." unique_id=452157499]
+texture_filter = 1
+position = Vector2(701, 259)
+scale = Vector2(6, 6)
+texture = ExtResource("2_tmki8")

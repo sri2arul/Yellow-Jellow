@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://dfooqrvmb3fof"]
+
+[ext_resource type="PackedScene" uid="uid://cdpe1eo4x02ug" path="res://jello.tscn" id="1_jg0dc"]
+[ext_resource type="PackedScene" uid="uid://cecamf17x8x0i" path="res://chunk.tscn" id="2_1y8me"]
+[ext_resource type="PackedScene" uid="uid://b8eu1c4fkum2x" path="res://spike.tscn" id="3_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://c1kfxsckixcb0" path="res://goal.tscn" id="4_0s5r2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1y8me"]
+load_path = "res://.godot/imported/catacomb wall.png-28b3a21ee136fa37b572b38d57b67559.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j8ne"]
+size = Vector2(500, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dov7"]
+size = Vector2(500, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehv2h"]
+size = Vector2(1639, 39.5)
+
+[node name="Level_2" type="Node2D" unique_id=1394532895]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=720665067]
+offset_left = -191.0
+offset_top = 398.0
+offset_right = 2609.0
+offset_bottom = 1998.0
+texture = SubResource("CompressedTexture2D_1y8me")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Jello" parent="." unique_id=1382979013 instance=ExtResource("1_jg0dc")]
+position = Vector2(371, 1137)
+
+[node name="Chunk2" parent="." unique_id=1642386592 instance=ExtResource("2_1y8me")]
+position = Vector2(1088, 2216)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1155474046]
+position = Vector2(10, -40)
+
+[node name="Floor3" type="StaticBody2D" parent="StaticBody2D" unique_id=1534184839]
+position = Vector2(1646, 1058)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor3" unique_id=1168530135]
+position = Vector2(-0.5, 16.25)
+shape = SubResource("RectangleShape2D_7j8ne")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor3" unique_id=281149527]
+offset_left = -251.0
+offset_top = -3.9999838
+offset_right = 249.0
+offset_bottom = 36.000015
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor2" type="StaticBody2D" parent="StaticBody2D" unique_id=1781639362]
+position = Vector2(36, 1058)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor2" unique_id=309509317]
+position = Vector2(-0.5, 16.25)
+shape = SubResource("RectangleShape2D_7dov7")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor2" unique_id=1264296436]
+offset_left = -251.0
+offset_top = -3.9999838
+offset_right = 249.0
+offset_bottom = 36.000015
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor8" type="StaticBody2D" parent="StaticBody2D" unique_id=1742021690]
+position = Vector2(2785, 1524)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor8" unique_id=1185210970]
+position = Vector2(-0.5, 16.25)
+shape = SubResource("RectangleShape2D_7dov7")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor8" unique_id=1140842390]
+offset_left = -251.0
+offset_top = -3.9999838
+offset_right = 249.0
+offset_bottom = 36.000015
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4" type="StaticBody2D" parent="StaticBody2D" unique_id=1821465541]
+position = Vector2(577, 812)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor4" unique_id=315255822]
+position = Vector2(242.5, 16.25)
+shape = SubResource("RectangleShape2D_ehv2h")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor4" unique_id=1271440862]
+offset_left = -577.0
+offset_top = -5.0
+offset_right = 1062.0
+offset_bottom = 35.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4" type="StaticBody2D" parent="StaticBody2D/Floor4" unique_id=1594367271]
+position = Vector2(-4, 469)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor4/Floor4" unique_id=185560520]
+position = Vector2(242.5, 16.25)
+shape = SubResource("RectangleShape2D_ehv2h")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor4/Floor4" unique_id=664935173]
+offset_left = -577.0
+offset_top = -5.0
+offset_right = 1062.0
+offset_bottom = 35.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Spike2" parent="." unique_id=1640478619 instance=ExtResource("3_n7ypv")]
+position = Vector2(787, 1181)
+
+[node name="Spike" parent="." unique_id=690792163 instance=ExtResource("3_n7ypv")]
+position = Vector2(838, 1181)
+
+[node name="Spike4" parent="." unique_id=255448848 instance=ExtResource("3_n7ypv")]
+position = Vector2(590, 1219)
+
+[node name="Spike5" parent="." unique_id=2091817790 instance=ExtResource("3_n7ypv")]
+position = Vector2(1017, 1218)
+
+[node name="Spike6" parent="." unique_id=1650774824 instance=ExtResource("3_n7ypv")]
+position = Vector2(1145, 1181)
+
+[node name="Spike3" parent="." unique_id=168112982 instance=ExtResource("3_n7ypv")]
+position = Vector2(1199, 1181)
+
+[node name="Spike7" parent="." unique_id=231472001 instance=ExtResource("3_n7ypv")]
+position = Vector2(1250, 1181)
+
+[node name="Goal" parent="." unique_id=583025471 instance=ExtResource("4_0s5r2")]
+position = Vector2(1433, 1171)
+next_level = "res://level_3.tscn"
+
+[node name="Label" type="Label" parent="." unique_id=1256849979]
+offset_left = 87.0
+offset_top = 836.0
+offset_right = 400.0
+offset_bottom = 872.0
+theme_override_font_sizes/font_size = 26
+text = "You should think on how to make youself fit under
+those gaps... (think s)."

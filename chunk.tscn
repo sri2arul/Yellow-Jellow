@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cecamf17x8x0i"]
+
+[ext_resource type="Script" uid="uid://cpike1yjs2brq" path="res://chunk.gd" id="1_kdh3y"]
+[ext_resource type="Texture2D" uid="uid://dwbw8veua2awu" path="res://Screenshot 2026-11-15 084420.png" id="2_eat54"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eat54"]
+
+[node name="Chunk" type="Area2D" unique_id=1642386592]
+script = ExtResource("1_kdh3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1701230975]
+shape = SubResource("CircleShape2D_eat54")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1478519534]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=629900958]
+offset_left = -20.0
+offset_top = -17.0
+offset_right = 20.0
+offset_bottom = 23.0
+texture = ExtResource("2_eat54")
+expand_mode = 1

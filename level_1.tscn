@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://ujih2xndycvy"]
+
+[ext_resource type="PackedScene" uid="uid://cdpe1eo4x02ug" path="res://jello.tscn" id="1_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://cecamf17x8x0i" path="res://chunk.tscn" id="2_rka8t"]
+[ext_resource type="PackedScene" uid="uid://b8eu1c4fkum2x" path="res://spike.tscn" id="3_5hph3"]
+[ext_resource type="PackedScene" uid="uid://c1kfxsckixcb0" path="res://goal.tscn" id="4_j7kpp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ihfcg"]
+load_path = "res://.godot/imported/catacomb wall.png-28b3a21ee136fa37b572b38d57b67559.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(500, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(500, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(1639, 39.5)
+
+[node name="Level_1" type="Node2D" unique_id=256015803]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=310754978]
+offset_left = -389.0
+offset_top = 264.0
+offset_right = 2411.0
+offset_bottom = 1864.0
+texture = SubResource("CompressedTexture2D_ihfcg")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Jello" parent="." unique_id=1382979013 instance=ExtResource("1_ihfcg")]
+position = Vector2(361, 1177)
+
+[node name="Chunk2" parent="." unique_id=1642386592 instance=ExtResource("2_rka8t")]
+position = Vector2(1078, 2256)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=626663954]
+
+[node name="Floor3" type="StaticBody2D" parent="StaticBody2D" unique_id=96051097]
+position = Vector2(1646, 1058)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor3" unique_id=1254806202]
+position = Vector2(-0.5, 16.25)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor3" unique_id=271729009]
+offset_left = -251.0
+offset_top = -3.9999838
+offset_right = 249.0
+offset_bottom = 36.000015
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor2" type="StaticBody2D" parent="StaticBody2D" unique_id=2037375726]
+position = Vector2(36, 1058)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor2" unique_id=294676816]
+position = Vector2(-0.5, 16.25)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor2" unique_id=1257748830]
+offset_left = -251.0
+offset_top = -3.9999838
+offset_right = 249.0
+offset_bottom = 36.000015
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4" type="StaticBody2D" parent="StaticBody2D" unique_id=1863303596]
+position = Vector2(577, 812)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor4" unique_id=888415481]
+position = Vector2(242.5, 16.25)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor4" unique_id=436906515]
+offset_left = -577.0
+offset_top = -5.0
+offset_right = 1062.0
+offset_bottom = 35.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4" type="StaticBody2D" parent="StaticBody2D/Floor4" unique_id=1304719861]
+position = Vector2(-4, 469)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Floor4/Floor4" unique_id=376054019]
+position = Vector2(242.5, 16.25)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Floor4/Floor4" unique_id=884385770]
+offset_left = -577.0
+offset_top = -5.0
+offset_right = 1062.0
+offset_bottom = 35.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Spike2" parent="." unique_id=1640478619 instance=ExtResource("3_5hph3")]
+position = Vector2(777, 1261)
+
+[node name="Spike" parent="." unique_id=604006391 instance=ExtResource("3_5hph3")]
+position = Vector2(828, 1261)
+
+[node name="Spike4" parent="." unique_id=1670288378 instance=ExtResource("3_5hph3")]
+position = Vector2(580, 1259)
+
+[node name="Spike5" parent="." unique_id=1019545633 instance=ExtResource("3_5hph3")]
+position = Vector2(1007, 1258)
+
+[node name="Spike6" parent="." unique_id=9451983 instance=ExtResource("3_5hph3")]
+position = Vector2(1057, 1259)
+
+[node name="Goal" parent="." unique_id=583025471 instance=ExtResource("4_j7kpp")]
+position = Vector2(1403, 1236)
+next_level = "res://level_2.tscn"
+
+[node name="Label" type="Label" parent="." unique_id=1323617291]
+offset_left = 78.0
+offset_top = 878.0
+offset_right = 391.0
+offset_bottom = 914.0
+theme_override_font_sizes/font_size = 26
+text = "Use A, W, and D to move."

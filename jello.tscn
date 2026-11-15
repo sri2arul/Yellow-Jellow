@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cdpe1eo4x02ug"]
+
+[ext_resource type="Script" uid="uid://bp0iwggpnt3iu" path="res://jello.gd" id="1_jhptw"]
+[ext_resource type="Texture2D" uid="uid://lss3ne13713a" path="res://slime1.png" id="2_5s6yt"]
+[ext_resource type="Texture2D" uid="uid://cg2bml2kw0r5e" path="res://slime2.png" id="3_vk624"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jhptw"]
+radius = 24.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_p6f6x"]
+frames = 2
+frame_0/texture = ExtResource("2_5s6yt")
+frame_1/texture = ExtResource("3_vk624")
+frame_1/duration = 1.0
+
+[node name="Jello" type="CharacterBody2D" unique_id=1382979013]
+script = ExtResource("1_jhptw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=388995621]
+shape = SubResource("CircleShape2D_jhptw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=946192519]
+offset_left = -30.0
+offset_top = -21.0
+offset_right = 24.0
+offset_bottom = 33.0
+rotation = -0.12217305
+color = Color(0, 1, 1, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1587673727]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_right = 48.0
+offset_bottom = 49.0
+texture = SubResource("AnimatedTexture_p6f6x")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=606575165]
+offset = Vector2(0, -150)

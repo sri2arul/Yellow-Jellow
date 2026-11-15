@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bwgjg7etl25me"]
+
+[ext_resource type="Texture2D" uid="uid://do0ixkhiogr2" path="res://Untitled design (46).png" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://lss3ne13713a" path="res://slime1.png" id="2_mae5d"]
+[ext_resource type="Script" uid="uid://wfwc31rlgn05" path="res://button_menu.gd" id="3_mae5d"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4hy44"]
+load_path = "res://.godot/imported/catacomb wall.png-28b3a21ee136fa37b572b38d57b67559.ctex"
+
+[sub_resource type="Gradient" id="Gradient_mae5d"]
+colors = PackedColorArray(1, 0.6666667, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4hy44"]
+gradient = SubResource("Gradient_mae5d")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Menu" type="Control" unique_id=2038363263]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2146648231]
+layout_mode = 0
+offset_left = -88.0
+offset_top = -99.0
+offset_right = 1312.0
+offset_bottom = 701.0
+texture = SubResource("CompressedTexture2D_4hy44")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1814371678]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 35.0
+offset_right = 1054.0
+offset_bottom = 635.0
+color = Color(0.12156863, 0.06666667, 0.07450981, 0.72156864)
+
+[node name="UntitledDesign(46)" type="Sprite2D" parent="." unique_id=1902431788]
+position = Vector2(589, 160)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ouk20")
+
+[node name="Glow" type="TextureRect" parent="." unique_id=1489754845]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 230.0
+offset_right = 513.0
+offset_bottom = 530.0
+texture = SubResource("GradientTexture2D_4hy44")
+expand_mode = 1
+
+[node name="Slime1" type="Sprite2D" parent="." unique_id=1441100271]
+light_mask = 0
+texture_filter = 1
+position = Vector2(360, 368)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mae5d")
+
+[node name="Button" type="Button" parent="." unique_id=353698882]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 354.0
+offset_right = 870.0
+offset_bottom = 425.0
+theme_override_font_sizes/font_size = 45
+text = "PLAY RIGHT NOW"
+script = ExtResource("3_mae5d")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
